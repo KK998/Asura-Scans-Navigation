@@ -1,0 +1,31 @@
+{
+  "name": "Asura Scans Navigation",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "commands": {
+    "clickNextButton": {
+      "suggested_key": {
+        "default": "Ctrl+Right",
+        "mac": "Command+Right"
+      },
+      "description": "Navigate to the next chapter"
+    },
+    "clickPrevButton": {
+      "suggested_key": {
+        "default": "Ctrl+Left",
+        "mac": "Command+Left"
+      },
+      "description": "Navigate to the previous chapter"
+    }
+  },
+  "background": {
+    "matches": ["*://*www.asurascans.com/*"],
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "asura16.png",
+    "32": "asura32.png",
+    "92": "asura92.png"
+  }
+}
